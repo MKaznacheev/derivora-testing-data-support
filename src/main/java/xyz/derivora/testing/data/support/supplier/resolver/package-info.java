@@ -25,5 +25,8 @@
  * which defines the contract for resolving suppliers. The abstract class
  * {@link xyz.derivora.testing.data.support.supplier.resolver.AbstractDataSupplierResolver}
  * provides a base implementation.</p>
+ *
+ * <p>For resolving {@link xyz.derivora.testing.data.support.supplier.DataSupplier} instances from enumeration types,
+ * see the {@link xyz.derivora.testing.data.support.supplier.resolver.enums} package.</p>
  */
 package xyz.derivora.testing.data.support.supplier.resolver;

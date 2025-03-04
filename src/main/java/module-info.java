@@ -31,4 +31,5 @@ module derivora.testing.data.support {
 
     exports xyz.derivora.testing.data.support.supplier;
     exports xyz.derivora.testing.data.support.supplier.resolver;
+    exports xyz.derivora.testing.data.support.supplier.resolver.enums;
 }
