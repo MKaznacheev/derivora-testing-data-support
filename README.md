@@ -14,6 +14,10 @@ At this stage, the project is in its initialization phase.
 * **Improve maintainability:** Offer reusable components for managing test data.
 * **Seamless integration:** Ensure compatibility with JUnit 5 and existing testing workflows.
 
+## Project Structure
+
+* Package `xyz.derivora.testing.data.support.supplier` provides interface for supplying structured data in array form.
+
 ## License
 
 This project is licensed under the GNU Lesser General Public License v3.0.
