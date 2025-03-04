@@ -59,17 +59,19 @@ public abstract class AbstractDataSupplierResolver<T> implements DataSupplierRes
      *
      * <p>If no classes are provided, an empty array is returned.</p>
      *
-     * <p>Null values are not allowed in the input array; a {@link NullPointerException} will be thrown
-     * if any of the supplied classes are {@code null}.</p>
+     * <p>Neither {@code supplierClasses} nor its elements can be {@code null}.
+     * A {@link NullPointerException} will be thrown if the array itself or any of its elements is {@code null}.</p>
      *
      * @param supplierClasses the classes of the {@link DataSupplier} implementations to be instantiated
      * @return an array of resolved {@link DataSupplier} instances
-     * @throws NullPointerException if any of the provided class references are {@code null}
+     * @throws NullPointerException if {@code supplierClasses} is {@code null} or contains {@code null} elements
      * @throws Exception if instantiation fails due to an invalid class definition or a reflection error
      */
     @Override
     @SafeVarargs
     public final DataSupplier<T>[] resolve(Class<? extends DataSupplier<T>>... supplierClasses) throws Exception {
+        Objects.requireNonNull(supplierClasses, "Supplier classes array cannot be null");
+
         if (supplierClasses.length == 0) {
             return arrayGenerator.generate(0);
         }
