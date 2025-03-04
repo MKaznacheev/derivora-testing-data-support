@@ -6,7 +6,7 @@
     <parent>
         <groupId>xyz.derivora</groupId>
         <artifactId>derivora-testing</artifactId>
-        <version>0.0.0</version>
+        <version>0.1.0</version>
     </parent>
 
     <artifactId>derivora-testing-data-support</artifactId>
@@ -35,4 +35,11 @@
             <email>kaznacheev.ma@gmail.com</email>
         </developer>
     </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>xyz.derivora</groupId>
+            <artifactId>derivora-util-kit</artifactId>
+        </dependency>
+    </dependencies>
 </project>
