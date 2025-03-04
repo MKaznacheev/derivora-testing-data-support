@@ -30,4 +30,5 @@ module derivora.testing.data.support {
     requires derivora.util.kit;
 
     exports xyz.derivora.testing.data.support.supplier;
+    exports xyz.derivora.testing.data.support.supplier.resolver;
 }

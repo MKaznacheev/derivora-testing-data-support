@@ -16,12 +16,14 @@
  */
 
 /**
- * Provides interfaces for supplying structured data in array form.
+ * Provides mechanisms for resolving {@link xyz.derivora.testing.data.support.supplier.DataSupplier} instances.
  *
- * <p>This package contains the {@link xyz.derivora.testing.data.support.supplier.DataSupplier}
- * interface, which extends {@link java.util.function.Supplier} to supply arrays of data.</p>
+ * <p>This package contains abstractions and implementations for dynamically instantiating
+ * {@link xyz.derivora.testing.data.support.supplier.DataSupplier} implementations.</p>
  *
- * <p>For resolving {@link xyz.derivora.testing.data.support.supplier.DataSupplier} instances from class references, see
- * the {@link xyz.derivora.testing.data.support.supplier.resolver} package.</p>
+ * <p>The main interface is {@link xyz.derivora.testing.data.support.supplier.resolver.DataSupplierResolver},
+ * which defines the contract for resolving suppliers. The abstract class
+ * {@link xyz.derivora.testing.data.support.supplier.resolver.AbstractDataSupplierResolver}
+ * provides a base implementation.</p>
  */
-package xyz.derivora.testing.data.support.supplier;
+package xyz.derivora.testing.data.support.supplier.resolver;

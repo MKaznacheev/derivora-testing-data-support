@@ -17,6 +17,7 @@ At this stage, the project is in its initialization phase.
 ## Project Structure
 
 * Package `xyz.derivora.testing.data.support.supplier` provides interface for supplying structured data in array form.
+  * Subpackage `xyz.derivora.testing.data.support.supplier.resolver` provides mechanisms for resolving `DataSupplier` instances.
 
 ## License
 
