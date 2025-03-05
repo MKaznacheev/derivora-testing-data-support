@@ -30,6 +30,7 @@ module derivora.testing.data.support {
     requires derivora.util.kit;
 
     exports xyz.derivora.testing.data.support.aggregator;
+    exports xyz.derivora.testing.data.support.provider;
     exports xyz.derivora.testing.data.support.supplier;
     exports xyz.derivora.testing.data.support.supplier.resolver;
     exports xyz.derivora.testing.data.support.supplier.resolver.enums;

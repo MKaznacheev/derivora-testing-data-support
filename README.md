@@ -18,6 +18,7 @@ At this stage, the project is in its initialization phase.
 
 * Package `xyz.derivora.testing.data.support.supplier` provides interface for supplying structured data in array form.
   * Subpackage `xyz.derivora.testing.data.support.aggregator` provides mechanisms for aggregating data from multiple `DataSupplier` instances.
+  * Subpackage `xyz.derivora.testing.data.support.provider` provides base classes for supplying test data to JUnit parameterized tests.
   * Subpackage `xyz.derivora.testing.data.support.supplier.resolver` provides mechanisms for resolving `DataSupplier` instances.
     * Subpackage `xyz.derivora.testing.data.support.supplier.resolver.enums` provides implementations for resolving `DataSupplier` instances from enumerations.
 
