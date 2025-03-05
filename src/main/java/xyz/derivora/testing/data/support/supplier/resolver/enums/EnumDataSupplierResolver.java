@@ -41,12 +41,12 @@ public interface EnumDataSupplierResolver<T> {
      * enumeration class. If any name does not match an existing enum constant, an exception is thrown.</p>
      *
      * @param enumType the enumeration class containing {@link DataSupplier} constants
-     * @param constantsNames the names of the enumeration constants to resolve
+     * @param constantNames the names of the enumeration constants to resolve
      * @return an array of resolved {@link DataSupplier} instances
      * @throws Exception if any of the provided enum constant names are invalid
      *                   or if instantiation fails due to a reflection error
      */
-    DataSupplier<T>[] resolve(Class<? extends DataSupplier<T>> enumType, String... constantsNames) throws Exception;
+    DataSupplier<T>[] resolve(Class<? extends DataSupplier<T>> enumType, String... constantNames) throws Exception;
 
     /**
      * Returns a default instance of {@code EnumDataSupplierResolver} that uses reflection

@@ -62,7 +62,7 @@ public abstract class AbstractEnumDataSupplierResolver<T> implements EnumDataSup
      * constant name must be valid. If any of these conditions are violated, an exception is thrown.</p>
      *
      * @param enumType the enumeration class containing {@link DataSupplier} constants
-     * @param constantsNames the names of the enumeration constants to resolve
+     * @param constantNames the names of the enumeration constants to resolve
      * @return an array of resolved {@link DataSupplier} instances
      * @throws NullPointerException if {@code enumType} or {@code constantsNames} is {@code null},
      *         or if any element in {@code constantsNames} is {@code null}
@@ -71,19 +71,19 @@ public abstract class AbstractEnumDataSupplierResolver<T> implements EnumDataSup
      *                   or if instantiation fails due to a reflection error
      */
     @Override
-    public final DataSupplier<T>[] resolve(Class<? extends DataSupplier<T>> enumType, String... constantsNames) throws Exception {
+    public final DataSupplier<T>[] resolve(Class<? extends DataSupplier<T>> enumType, String... constantNames) throws Exception {
         Objects.requireNonNull(enumType, "Enum type cannot be null");
-        Objects.requireNonNull(constantsNames, "Constants names array cannot be null");
+        Objects.requireNonNull(constantNames, "Constant names array cannot be null");
 
         DataSupplier<T>[] constants = resolveConstants(enumType);
 
-        if (constantsNames.length == 0) {
+        if (constantNames.length == 0) {
             return arrayGenerator.generate(0);
         }
 
-        DataSupplier<T>[] suppliers = arrayGenerator.generate(constantsNames.length);
+        DataSupplier<T>[] suppliers = arrayGenerator.generate(constantNames.length);
         for (int i = 0; i < suppliers.length; i++) {
-            String constantName = Objects.requireNonNull(constantsNames[i], "Constant name cannot be null");
+            String constantName = Objects.requireNonNull(constantNames[i], "Constant name cannot be null");
             suppliers[i] = resolve(constants, constantName);
         }
 
