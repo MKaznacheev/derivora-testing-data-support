@@ -16,21 +16,14 @@
  */
 
 /**
- * Provides utilities for supporting test data management.
+ * Provides mechanisms for aggregating data from multiple {@link xyz.derivora.testing.data.support.supplier.DataSupplier} instances.
  *
- * <p>This module includes data suppliers and related utilities
- * to facilitate structured test data generation.</p>
+ * <p>This package defines the {@link xyz.derivora.testing.data.support.aggregator.DataAggregator} interface,
+ * which serves as a contract for classes that collect and combine data from multiple suppliers.
+ * Implementations of this interface define different aggregation strategies.</p>
  *
- * <p>It requires {@code org.junit.jupiter.params} transitively, making it
- * available to modules depending on this one. Additionally, it depends on
- * {@code derivora.util.kit} for core utilities.</p>
+ * <p>The main implementation provided is {@link xyz.derivora.testing.data.support.aggregator.FlatDataAggregator},
+ * which concatenates the arrays supplied by individual {@link xyz.derivora.testing.data.support.supplier.DataSupplier}
+ * instances into a single contiguous array.</p>
  */
-module derivora.testing.data.support {
-    requires transitive org.junit.jupiter.params;
-    requires derivora.util.kit;
-
-    exports xyz.derivora.testing.data.support.aggregator;
-    exports xyz.derivora.testing.data.support.supplier;
-    exports xyz.derivora.testing.data.support.supplier.resolver;
-    exports xyz.derivora.testing.data.support.supplier.resolver.enums;
-}
+package xyz.derivora.testing.data.support.aggregator;
